@@ -9,7 +9,7 @@ const LinkArea = styled.a`
     justify-content: center;
 
     border-radius: 10px;
-    background-color: #0B4E0B;
+    background-color: ${props => props.active ? '#0B4E0B' : 'transparent'};
 `;
 
 const LinkIcon = styled.img`
