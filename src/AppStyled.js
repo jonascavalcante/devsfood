@@ -9,6 +9,8 @@ const Container = styled.div`
 const Menu = styled.div`
     width: 80px;
     display: flex;
+    flex-direction: column;
+    gap: 10px;
     background-color: #136712;
 `;
 
