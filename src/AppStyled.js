@@ -20,6 +20,7 @@ const PageBody = styled.div`
     display: flex;
     flex: 1;
     background-color: #00990D;
+    background-image: url('./assets/bg.png');
 `;
 
 export { Container, Menu, PageBody };
