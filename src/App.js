@@ -5,6 +5,7 @@ import { Container, Menu, PageBody } from './AppStyled';
 
 import MenuItem from './components/MenuItem';
 import PrivateRoute from './components/PrivateRoute';
+import Cart from './components/Cart';
 
 import HomeScreen from './pages/HomeScreen';
 import Tela2Screen from './pages/Tela2Screen';
@@ -42,6 +43,8 @@ export default () => {
 
                     </Switch>
                 </PageBody>
+
+                <Cart />
 
             </Container>
         </BrowserRouter>
