@@ -21,6 +21,7 @@ const SearchInput = styled.input`
     height: 50px;
     padding-left: 50px;
 
+    font-size: 15px;
     border-radius: 25px;
     border: none;
     outline: transparent;
@@ -30,6 +31,13 @@ const SearchInput = styled.input`
     background-size: 30px;
     background-repeat: no-repeat;
     background-position: 10px center;
+
+    transition: all ease 0.2s;
+
+    cursor: pointer;
+    &:focus {
+        cursor: text;
+    }
 `;
 
 export { Container, Logo, SearchInput };
