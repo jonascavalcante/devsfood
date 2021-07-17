@@ -17,7 +17,7 @@ const Logo = styled.img`
 `;
 
 const SearchInput = styled.input`
-    width: 0px;
+    width: ${props => props.active ? 300 : 0 }px;
     height: 50px;
     padding-left: 50px;
 
