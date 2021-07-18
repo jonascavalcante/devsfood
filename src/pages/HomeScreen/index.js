@@ -44,6 +44,7 @@ export default () => {
                                 image: '/assets/food-and-restaurant.png'
                             }}
                             activeCategory={activeCategory}
+                            setActiveCategory={setActiveCategory}
                         />
 
                         {categories.map((item, index) => (
@@ -51,6 +52,7 @@ export default () => {
                                 key={index}
                                 data={item}
                                 activeCategory={activeCategory}
+                                setActiveCategory={setActiveCategory}
                             />
                         ))}
 

@@ -10,6 +10,8 @@ const Container = styled.div`
     
     border-radius: 20px;
     background-color: ${props => props.active === props.id ? '#FEFFFF' : '#ABE09A' };
+    cursor: pointer;
+    transition: all ease 0.2s;
 
     &:hover {
         background-color: #FEFFFF;
