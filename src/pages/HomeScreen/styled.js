@@ -1,8 +1,23 @@
 import styled from 'styled-components';
 
-export const Container = styled.div`
+const Container = styled.div`
     width: 100%;
     padding: 15px;
 `;
 
-export const Titulo = styled.h1``;
+const CategoryArea = styled.div`
+    margin-top: 20px;
+    color: #fff;
+`;
+
+const CategoryList = styled.div`
+    margin-top: 10px;
+    display: flex;
+    gap: 10px;
+`;
+
+const Titulo = styled.h1`
+
+`;
+
+export { Container, CategoryArea, CategoryList, Titulo };
