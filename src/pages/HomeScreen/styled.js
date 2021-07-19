@@ -16,8 +16,14 @@ const CategoryList = styled.div`
     gap: 10px;
 `;
 
-const Titulo = styled.h1`
-
+const ProductArea = styled.div`
+    margin: 20px 0 10px 0;
 `;
 
-export { Container, CategoryArea, CategoryList, Titulo };
+const ProductList = styled.div`
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+`;
+
+export { Container, CategoryArea, CategoryList, ProductArea, ProductList };
