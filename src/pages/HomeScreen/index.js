@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import ReactTooltip from 'react-tooltip';
 
 import { Container, CategoryArea, CategoryList } from './styled';
 
@@ -20,6 +21,8 @@ export default () => {
             if (cat.error === '') {
                 setCategories(cat.result);
             }
+
+            ReactTooltip.rebuild();
         })();
     }, []);
 
@@ -40,7 +43,7 @@ export default () => {
                         <CategoryItem
                             data={{
                                 id: 0,
-                                title: 'Todas as categorias',
+                                name: 'Todas as categorias',
                                 image: '/assets/food-and-restaurant.png'
                             }}
                             activeCategory={activeCategory}
