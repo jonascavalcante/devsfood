@@ -26,4 +26,12 @@ const ProductList = styled.div`
     gap: 15px;
 `;
 
-export { Container, CategoryArea, CategoryList, ProductArea, ProductList };
+const ProductPaginationArea = styled.div`
+
+`;
+
+const ProductPaginationItem = styled.div`
+
+`;
+
+export { Container, CategoryArea, CategoryList, ProductArea, ProductList, ProductPaginationArea, ProductPaginationItem };
