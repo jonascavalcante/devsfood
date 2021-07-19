@@ -21,6 +21,7 @@ const PageBody = styled.div`
     flex: 1;
     background-color: #00990D;
     background-image: url('./assets/bg.png');
+    overflow-y: auto;
 `;
 
 export { Container, Menu, PageBody };
