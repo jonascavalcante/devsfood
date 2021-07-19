@@ -27,11 +27,18 @@ const ProductList = styled.div`
 `;
 
 const ProductPaginationArea = styled.div`
-
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
 `;
 
 const ProductPaginationItem = styled.div`
-
+    padding: 5px 10px;
+    border-radius: 5px;
+    background-color: ${props => props.active === props.current ? '#fff' : '#ABE09A' };
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+    cursor: pointer;
 `;
 
 export { Container, CategoryArea, CategoryList, ProductArea, ProductList, ProductPaginationArea, ProductPaginationItem };
