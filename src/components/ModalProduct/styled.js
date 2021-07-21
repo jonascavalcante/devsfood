@@ -56,6 +56,7 @@ const ProductQtImage = styled.img`
     padding: 8px;
     background-color: #073C06;
     border-radius: 5px;
+    cursor: pointer;
 `;
 
 const ProductQtText = styled.div`
@@ -87,6 +88,7 @@ const ProductButton = styled.button`
     color: #fff;
     background-color: #073C06;
     box-shadow: 4px 5px 0 rgba(0, 0, 0, 0.16);
+    cursor: pointer;
 `;
 
 export { Container, ProductArea, ProductPhoto, ProductInfoArea, ProductDetails, ProductName, ProductIngredients, ProductQuantityArea, ProductQuantity, ProductQtImage, ProductQtText, ProductPrice, ProductButtons, ProductButton };

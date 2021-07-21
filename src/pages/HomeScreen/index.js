@@ -141,6 +141,7 @@ export default () => {
             >
                 <ModalProduct
                     data={modalData}
+                    setStatus={setModalStatus}
                 />
             </Modal>
 
