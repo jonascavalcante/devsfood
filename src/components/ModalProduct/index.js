@@ -27,6 +27,11 @@ const ModalProduct = ({ data, setStatus }) => {
         setStatus(false);
     }
 
+    const handleAddToCart = () => {
+        
+        setStatus(false);
+    }
+
     return (
         <Container>
 
@@ -74,7 +79,11 @@ const ModalProduct = ({ data, setStatus }) => {
                     Cancelar
                 </ProductButton>
 
-                <ProductButton>Adicionar ao carrinho</ProductButton>
+                <ProductButton
+                    onClick={handleAddToCart}
+                >
+                    Adicionar ao carrinho
+                </ProductButton>
 
             </ProductButtons>
 
