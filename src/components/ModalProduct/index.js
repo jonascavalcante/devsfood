@@ -1,7 +1,10 @@
 import React, { useState, useEffect } from 'react';
+import { useDispatch } from 'react-redux';
 import { Container, ProductArea, ProductButton, ProductButtons, ProductDetails, ProductInfoArea, ProductIngredients, ProductName, ProductPhoto, ProductPrice, ProductQtImage, ProductQtText, ProductQuantity, ProductQuantityArea } from './styled';
 
 const ModalProduct = ({ data, setStatus }) => {
+
+    const dispatch = useDispatch();
 
     const [qt, setQt] = useState(1);
 
@@ -28,7 +31,12 @@ const ModalProduct = ({ data, setStatus }) => {
     }
 
     const handleAddToCart = () => {
-        
+
+        dispatch({
+            type: 'ADD_PRODUCT',
+            payload: { data, qt }
+        })
+
         setStatus(false);
     }
 
