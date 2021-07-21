@@ -9,6 +9,7 @@ import Header from '../../components/Header';
 import CategoryItem from '../../components/CategoryItem';
 import ProductItem from '../../components/ProductItem';
 import Modal from '../../components/Modal';
+import ModalProduct from '../../components/ModalProduct';
 
 let searchTimer = null;
 
@@ -131,7 +132,9 @@ export default () => {
                 status={modalStatus}
                 setStatus={setModalStatus}
             >
-                ...
+                <ModalProduct
+
+                />
             </Modal>
 
         </Container>

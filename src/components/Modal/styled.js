@@ -15,10 +15,8 @@ const Container = styled.div`
 `;
 
 const ModalBody = styled.div`
-    width: 300px;
     max-width: 100%;
-    height: 300px;
-    max-height: 90vh;
+    max-height: 95vh;
 
     border-radius: 20px;
     box-shadow: 0 0 50px #000;
