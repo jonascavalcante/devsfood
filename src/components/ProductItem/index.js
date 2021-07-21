@@ -1,11 +1,15 @@
 import React from 'react';
 import { Container, ProductPhotoArea, ProductPhoto, ProductInfoArea, ProductName, ProductPrice, ProductIngredients, ProductButtonArea, ProductButton } from './styled';
 
-const ProductItem = ({data}) => {
+const ProductItem = ({ data, onClick }) => {
+
+    const handleClick = () => {
+        onClick(data);
+    }
 
     return (
-        <Container>
-            
+        <Container onClick={handleClick}>
+
             <ProductPhotoArea>
                 <ProductPhoto src={data.image} />
             </ProductPhotoArea>

@@ -20,7 +20,8 @@ export default () => {
     const [products, setProducts] = useState([]);
     const [totalPages, setTotalPages] = useState(0);
 
-    const [modalStatus, setModalStatus] = useState(true);
+    const [modalStatus, setModalStatus] = useState(false);
+    const [modalData, setModalData] = useState({});
 
     const [activeCategory, setActiveCategory] = useState(0);
     const [activePage, setActivePage] = useState(1);
@@ -59,6 +60,11 @@ export default () => {
         getProducts();
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [activeCategory, activePage, activeSearch]);
+
+    const handleProductClick = (data) => {
+        setModalData(data);
+        setModalStatus(true);
+    }
 
     return (
         <Container>
@@ -106,6 +112,7 @@ export default () => {
                             <ProductItem
                                 key={index}
                                 data={item}
+                                onClick={handleProductClick}
                             />
                         ))}
 
@@ -133,7 +140,7 @@ export default () => {
                 setStatus={setModalStatus}
             >
                 <ModalProduct
-
+                    data={modalData}
                 />
             </Modal>
 

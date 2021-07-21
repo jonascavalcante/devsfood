@@ -1,19 +1,19 @@
 import React from 'react';
 import { Container, ProductArea, ProductButtons, ProductDetails, ProductInfoArea, ProductPhoto, ProductQuantityArea } from './styled';
 
-const ModalProduct = () => {
+const ModalProduct = ({ data }) => {
 
     return (
         <Container>
 
             <ProductArea>
 
-                <ProductPhoto src="" />
+                <ProductPhoto src={data.image} />
 
                 <ProductInfoArea>
 
                     <ProductDetails>
-                        DDD
+                        {data.name}
                     </ProductDetails>
 
                     <ProductQuantityArea>
