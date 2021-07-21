@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, ProductArea, ProductButtons, ProductDetails, ProductInfoArea, ProductPhoto, ProductQuantityArea } from './styled';
+import { Container, ProductArea, ProductButton, ProductButtons, ProductDetails, ProductInfoArea, ProductIngredients, ProductName, ProductPhoto, ProductPrice, ProductQtImage, ProductQtText, ProductQuantity, ProductQuantityArea } from './styled';
 
 const ModalProduct = ({ data }) => {
 
@@ -13,11 +13,22 @@ const ModalProduct = ({ data }) => {
                 <ProductInfoArea>
 
                     <ProductDetails>
-                        {data.name}
+                        <ProductName>{data.name}</ProductName>
+                        <ProductIngredients>{data.ingredients}</ProductIngredients>
                     </ProductDetails>
 
                     <ProductQuantityArea>
-                        QQQ
+                     
+                        <ProductQuantity>
+                            <ProductQtImage src="/assets/minus.png" />
+                            <ProductQtText>9</ProductQtText>
+                            <ProductQtImage src="/assets/plus.png" />
+                        </ProductQuantity>
+                    
+                        <ProductPrice>
+                            R$ {data.price}
+                        </ProductPrice>
+
                     </ProductQuantityArea>
 
                 </ProductInfoArea>
@@ -25,7 +36,8 @@ const ModalProduct = ({ data }) => {
             </ProductArea>
 
             <ProductButtons>
-                BBB
+                <ProductButton small={true}>Cancelar</ProductButton>
+                <ProductButton>Adicionar ao carrinho</ProductButton>
             </ProductButtons>
 
         </Container>
