@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import { CartArea, CartBody, CartHeader, CartIcon, CartText, ProductInfoArea, ProductItem, ProductName, ProductPhoto, ProductPrice, ProductQtIcon, ProductQtText, ProductQuantityArea, ProductsArea } from './styled';
 
 const Cart = () => {
+
+    const dispatch = useDispatch();
 
     const products = useSelector(state => state.cart.products);
 
@@ -10,6 +12,13 @@ const Cart = () => {
 
     const handleCartClick = () => {
         setShow(!show);
+    }
+
+    const handleProductChange = (key, type) => {
+        dispatch({
+            type: 'CHANGE_PRODUCT',
+            payload: { key, type }
+        });
     }
 
     return (
@@ -39,12 +48,14 @@ const Cart = () => {
 
                                 <ProductQtIcon
                                     src="/assets/minus.png"
+                                    onClick={() => handleProductChange(index, '-')}
                                 />
 
                                 <ProductQtText>{item.qt}</ProductQtText>
 
                                 <ProductQtIcon
                                     src="/assets/plus.png"
+                                    onClick={() => handleProductChange(index, '+')}
                                 />
 
                             </ProductQuantityArea>
